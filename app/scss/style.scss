@@ -4,37 +4,116 @@
 @import 'libs';
 @import 'global';
 
+// H E A D E R
 .header {
-    &__inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        min-height: 120px;
-    }
-    &__btn {
-        background-color: transparent;
-        border: none;
-        padding: 0;
-        cursor: pointer;
-    }
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 120px;
+  }
+  &__btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+  }
 }
 
 .logo {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .menu {
-    padding-right: 15px;
-    &__list {
-        display: flex;
+  padding-right: 15px;
+  &__list {
+    display: flex;
+  }
+  &__list-item {
+    padding-left: 25px;
+    padding-right: 45px;
+  }
+  &__list-link {
+    @extend %title-font;
+    color: rgba(54, 56, 56, 0.9);
+    line-height: 22px;
+  }
+}
+
+// F O O T E R
+.footer {
+  &__content {
+    background-color: #DFDFDF;
+    padding: 60px 0 80px;
+  }
+  &__inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  &__info {
+    width: 540px;
+  }
+  &__info-title {
+    @extend %title-font;
+    line-height: 23px;
+    color: $title;
+    margin-bottom: 14px;
+  }
+  &__info-text {
+    margin-bottom: 16px;
+  }
+  &__info-email {
+    font-weight: 600;
+    font-size: 14px;
+    color: $title;
+    margin-bottom: 23px;
+    padding-left: 30px;
+    display: inline-block;
+    :before {
+      content: "";
+      display: flex;
+      width: 16px;
+      height: 16px;
+      background-image: url("images/email-icon.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
     }
-    &__list-item {
-        padding-left: 25px;
-        padding-right: 45px;
+  }
+  &__form {
+    display: flex;
+  }
+  &__form-input {
+    width: 100%;
+    border: 1px solid rgba($title, .7);
+    border-radius: 21px;
+    background-color: transparent;
+    outline: none;
+    padding: 6px 10px 6px 18px;
+    margin-right: 9px;
+    &::placeholder {
+      font-family: Open Sans, sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 28px;
+      color: #A1A1A1;
     }
-    &__list-link {
-        @extend %title-font;
-        color: rgba(54, 56, 56, 0.9);
-        line-height: 22px;
-    }
+  }
+  &__form-btn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 21px;
+    background-color: $title;
+    font-weight: 600;
+    color: #FFFFF0;
+    padding: 6px 12px;
+    min-width: 160px;
+  }
+  &__copyright {
+    padding: 42px 0;
+    text-align: center;
+    background-color: $title;
+    color: #A1A1A1;
+  }
 }
